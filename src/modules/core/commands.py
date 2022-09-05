@@ -1,0 +1,2 @@
+EXIT = "SAIR"
+AWAKE = "ESCUTE"
