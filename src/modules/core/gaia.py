@@ -21,11 +21,15 @@ class Gaia(Hefesto, Apolo, Atena):
         self.__speak_engine = pyttsx3.init()
 
     def start(self) -> None:
+        self.__speak("Iniciando módulos do sistema GAIA")
         self._create_commands(self.__settings)
         self._create_recognizer(self.__settings)
         self._create_sound_capture()
 
         self._start_stream()
+        self.__speak("Módulos iniciados com sucesso")
+
+        self.__speak("Iniciando processo de conversão de fala")
         self._listen(self.__process)
 
     def __process(self, data: bytes) -> bool:

@@ -12,6 +12,7 @@ class Apolo:
     def _start_stream(self) -> None:
         self.__stream = self.__capture.open(
             format=pyaudio.paInt16,
+            channels=1,
             rate=16000, 
             input=True,
             input_device_index=1,
